@@ -1,0 +1,73 @@
+.page-wrap {
+  width: 100%;
+}
+
+#fan-reel {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 50px;
+  padding: 0 4%;
+}
+
+.thumbnail {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  width: 16.6666667%;
+  height: auto;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1025px) {
+  .thumbnail {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .thumbnail {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .thumbnail {
+    width: 49.25%;
+  }
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  background: #ccc;
+}
+
+.hover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,.85);
+  height: 62px;
+  text-align: center;
+}
+
+.no-display {
+  display: none;
+}
+
+.display {
+  display: block;
+}
