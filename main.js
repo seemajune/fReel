@@ -22,8 +22,6 @@ var FanReel = function(module){
       var outerDiv = document.createElement('div');
       outerDiv.setAttribute('id', _data.items[i].id);
       outerDiv.className = "thumbnail";
-    // outerDiv.setAttribute('data-username', _data.items[i].user.username);
-    // outerDiv.setAttribute('data-like-count', _data.items[i].like_count);
       fanReel.appendChild(outerDiv);
       var innerDiv = document.createElement('img');
       innerDiv.setAttribute('src', 'http:' + _data.items[i].photo.medium_square.url);
@@ -46,9 +44,6 @@ var FanReel = function(module){
       outerDiv.addEventListener('click', function(e){
         e.preventDefault();
         e.currentTarget.children[1].className =  "hover-overlay no-display";   
-        // add modal to show product, display: none;
-        // toggle show/hide of bottom div to product page 
-        // include close button @ top right of modal
       });
 
     }

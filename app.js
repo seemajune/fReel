@@ -12,7 +12,7 @@ $(document).ready(function(){
       for(var i =0; i < _data.items.length; i++){
         $fanReel.append('<div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
          '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count + 
-         '</div><div class="triangle-overlay no-display"><img src="triangle.png">');
+         '</div><div class="triangle-overlay no-display"><img src="triangle.png"></div></div><div class="outer-modal no-display"><div class="inner-modal no-display">');
       }
 
       var $thumbnail = $('.thumbnail');
