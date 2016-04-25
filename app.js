@@ -10,9 +10,9 @@ $(document).ready(function(){
       $fanReel =  $('#fan-reel');
       
       for(var i =0; i < _data.items.length; i++){
-        $fanReel.append('<div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
+        $fanReel.append('<span id="outer-modal no-display"><div class="inner-modal no-display"></div></span><div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
          '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count + 
-         '</div><div class="triangle-overlay no-display"><img src="triangle.png"></div></div><div class="outer-modal no-display"><div class="inner-modal no-display">');
+         '</div><div class="triangle-overlay no-display"><img src="triangle.png">');
       }
 
       var $thumbnail = $('.thumbnail');
@@ -39,8 +39,8 @@ $(document).ready(function(){
         }
 
         $(e.currentTarget).children().eq(2).removeClass('no-display');
-        $(e.currentTarget).next('.outer-modal').removeClass('no-display').addClass('display');
-        $(e.currentTarget).next('.outer-modal').children().eq(0).removeClass('no-display');
+        $(e.currentTarget).next('.outer-modal').removeClass('no-display');
+        // $(e.currentTarget).next('.outer-modal').children().eq(0).removeClass('no-display');
       });
 
     }
