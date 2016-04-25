@@ -68,7 +68,7 @@ img {
   display: block;
 }
 
-.viewport-inner {
+/*.viewport-inner {
   pointer-events: none;
   position : absolute;
   top: 0;
@@ -86,9 +86,9 @@ img {
   width: auto;
   height: 280px;
   position: relative;
-  top: 50%;
+  top: 0;
   border: 2px solid #555;
-}
+}*/
 
 .triangle-overlay {
   position: absolute;

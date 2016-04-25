@@ -34,12 +34,12 @@ $(document).ready(function(){
           if (!$('.triangle-overlay').eq(i).hasClass('no-display')){
             $('.triangle-overlay').eq(i).addClass('no-display');
           } 
-          if (!$('.outer-modal').eq(i).hasClass('no-display')){
-            $('.outer-modal').eq(i).addClass('no-display');
-          }
+          // if (!$('.outer-modal').eq(i).hasClass('no-display')){
+          //   $('.outer-modal').eq(i).addClass('no-display');
+          // }
         }
         $(e.currentTarget).children().eq(2).removeClass('no-display');
-        $(e.currentTarget).prev('.outer-modal').removeClass('no-display');
+        // $(e.currentTarget).prev('.outer-modal').removeClass('no-display');
       });
     }
 
