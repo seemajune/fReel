@@ -1,5 +1,4 @@
 $(document).ready(function(){ 
-
   var FanReel = function(module){
     var _data,
       $fanReel;
@@ -30,7 +29,6 @@ $(document).ready(function(){
       $thumbnail.on('click', function(e){
         e.preventDefault();
         $(e.currentTarget).children().eq(1).addClass('no-display');
-        console.log( $(e.currentTarget).children().eq(1));
 
         for(var i=0; i<$('.triangle-overlay').length; i++){
           if (!$('.triangle-overlay').eq(i).hasClass('no-display')){
@@ -40,15 +38,12 @@ $(document).ready(function(){
             $('.outer-modal').eq(i).addClass('no-display');
           }
         }
-
         $(e.currentTarget).children().eq(2).removeClass('no-display');
         $(e.currentTarget).prev('.outer-modal').removeClass('no-display');
       });
-
     }
 
     module.init = function(){
-
       $.ajax({
         url: "http://api.curalate.com/v1/reels/uogallery.jsonp",
         dataType: "jsonp",
@@ -59,11 +54,9 @@ $(document).ready(function(){
 
     }
     return module;
-
   }(FanReel || {});
 
   FanReel.init();
-
 });
 
 

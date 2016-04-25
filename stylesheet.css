@@ -51,10 +51,8 @@
 }
 
 img {
-  display: inline-block;
   max-width: 100%;
   height: auto;
-  background: #ccc;
 }
 
 .hover-overlay {
