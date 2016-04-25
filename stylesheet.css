@@ -75,6 +75,27 @@ img {
   display: block;
 }
 
+.outer-modal {
+  background: none repeat scroll 0 0 #fff;
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.92);
+  height: 540px;
+  left: 50%;
+  margin: 0 auto auto -385px;
+  opacity: 0;
+  padding: 28px;
+  position: relative;
+  top: -10%;
+  transition: opacity .3s linear 0,top .3s ease-out 0;
+  width: 770px;
+  z-index: 1001;
+
+}
+
+.inner-modal {
+
+}
+
 .triangle-overlay {
   position: absolute;
   bottom: 0;

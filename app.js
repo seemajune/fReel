@@ -39,6 +39,8 @@ $(document).ready(function(){
         }
 
         $(e.currentTarget).children().eq(2).removeClass('no-display');
+        $(e.currentTarget).next('.outer-modal').removeClass('no-display').addClass('display');
+        $(e.currentTarget).next('.outer-modal').children().eq(0).removeClass('no-display');
       });
 
     }
