@@ -5,7 +5,7 @@ $(document).ready(function(){
     
     function _setUpDom(res){
       _data = res;
-      $('body').append('<div class="page-wrap"><div id="fan-reel"></div></div>');
+      $('body').append('<div id="fan-reel"></div>');
       $fanReel =  $('#fan-reel');
       
       for(var i =0; i < _data.items.length; i++){

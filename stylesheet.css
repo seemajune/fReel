@@ -1,14 +1,9 @@
-.page-wrap {
-  width: 100%;
-}
-
 #fan-reel {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   vertical-align: top;
-  width: 100%;
   max-width: 1280px;
   margin: 0 auto 50px;
   padding: 0 4%;
