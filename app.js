@@ -32,8 +32,6 @@ $(document).ready(function(){
         var lengthOfImages = $('.triangle-overlay').length;
 
         $(e.currentTarget).children().eq(1).addClass('no-display');
-     
-        $('<div class="outer-modal" product-data=' + $(e.currentTarget).attr('id') +'></div>').insertAfter($(e.currentTarget));
 
         for(var i=0; i<lengthOfImages; i++){
           if (!$('.triangle-overlay').eq(i).hasClass('no-display')){
@@ -45,6 +43,7 @@ $(document).ready(function(){
         }
 
         $(e.currentTarget).children().eq(2).removeClass('no-display');
+        $('<div class="outer-modal" product-data=' + $(e.currentTarget).attr('id') +'></div>').insertAfter($(e.currentTarget));
         
       });
     }

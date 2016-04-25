@@ -69,14 +69,23 @@ img {
 }
 
 .outer-modal {
-
+  position: relative;
+  right: 0;
+  left: 0;
+  bottom: 10%;
+  z-index: 999;
+ 
+  background-color: #fff;
+  border: 1px solid #555;
+  height: 200px;
+  width: 100%;
 
 }
 
 .triangle-overlay {
   position: absolute;
   bottom: 0;
-  z-index: 99999;
+  z-index: 100;
 }
 
 .triangle-overlay img {
