@@ -12,6 +12,9 @@
   max-width: 1280px;
   margin: 0 auto 50px;
   padding: 0 4%;
+  font-family: Helvetica,sans-serif;
+  font-size: 0.7em;
+  text-align: center;
 }
 
 .thumbnail {
@@ -71,3 +74,15 @@ img {
 .display {
   display: block;
 }
+
+.triangle-overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 999999;
+}
+
+.triangle-overlay img {
+  width: 20%;
+  height: 15px;
+}
+

@@ -11,7 +11,8 @@ $(document).ready(function(){
       
       for(var i =0; i < _data.items.length; i++){
         $fanReel.append('<div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
-         '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count);
+         '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count + 
+         '</div><div class="triangle-overlay no-display"><img src="triangle.png">');
       }
 
       var $thumbnail = $('.thumbnail');
@@ -29,6 +30,15 @@ $(document).ready(function(){
       $thumbnail.on('click', function(e){
         e.preventDefault();
         $(e.currentTarget).children().eq(1).addClass('no-display');
+
+        for(var i=0; i<$('.triangle-overlay').length; i++){
+          if (!$('.triangle-overlay').eq(i).hasClass('no-display')){
+            $('.triangle-overlay').eq(i).addClass('no-display');
+            break;
+          } 
+        }
+
+        $(e.currentTarget).children().eq(2).removeClass('no-display');
       });
 
     }
@@ -51,4 +61,18 @@ $(document).ready(function(){
   FanReel.init();
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
