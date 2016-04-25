@@ -12,7 +12,6 @@ $(document).ready(function(){
         $fanReel.append('<div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
          '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count + 
          '</div><div class="triangle-overlay no-display"><img src="triangle.png">');
-
       }
 
       var $thumbnail = $('.thumbnail');
@@ -29,10 +28,13 @@ $(document).ready(function(){
 
       $thumbnail.on('click', function(e){
         e.preventDefault();
+
+        $('.outer-modal').remove();
+
         var lengthOfImages = $('.triangle-overlay').length,
           productImgUrl,
           productLink;
-
+          // calculate width of screen / ($(e.currentTarget).width()) & get index of to find out how many images are in row, insert modal after index of last in that row;
         $(e.currentTarget).children().eq(1).addClass('no-display');
 
         for(var i=0; i<lengthOfImages; i++){
