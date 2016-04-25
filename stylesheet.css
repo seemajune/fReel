@@ -76,9 +76,14 @@ img {
   bottom: 20%;
   z-index: 999;
   background-color: #fff;
-  height: 280px;
+  height: 100%;
   width: 100%;
 
+}
+
+.outer-modal img {
+  height: 10%;
+  width: 10%;
 }
 
 .triangle-overlay {
