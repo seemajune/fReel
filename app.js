@@ -10,7 +10,7 @@ $(document).ready(function(){
       $fanReel =  $('#fan-reel');
       
       for(var i =0; i < _data.items.length; i++){
-        $fanReel.append('<span id="outer-modal no-display"><div class="inner-modal no-display"></div></span><div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
+        $fanReel.append('<div class="outer-modal no-display"><div class="viewport-inner"></div></div><div class="thumbnail" id=' + _data.items[i].id + '><img src=' + 'http:' + _data.items[i].photo.medium_square.url +
          '><div class="hover-overlay no-display">username: ' + _data.items[i].user.username + '<br />like count: ' + _data.items[i].like_count + 
          '</div><div class="triangle-overlay no-display"><img src="triangle.png">');
       }
@@ -30,17 +30,19 @@ $(document).ready(function(){
       $thumbnail.on('click', function(e){
         e.preventDefault();
         $(e.currentTarget).children().eq(1).addClass('no-display');
+        console.log( $(e.currentTarget).children().eq(1));
 
         for(var i=0; i<$('.triangle-overlay').length; i++){
           if (!$('.triangle-overlay').eq(i).hasClass('no-display')){
             $('.triangle-overlay').eq(i).addClass('no-display');
-            break;
           } 
+          if (!$('.outer-modal').eq(i).hasClass('no-display')){
+            $('.outer-modal').eq(i).addClass('no-display');
+          }
         }
 
         $(e.currentTarget).children().eq(2).removeClass('no-display');
-        $(e.currentTarget).next('.outer-modal').removeClass('no-display');
-        // $(e.currentTarget).next('.outer-modal').children().eq(0).removeClass('no-display');
+        $(e.currentTarget).prev('.outer-modal').removeClass('no-display');
       });
 
     }

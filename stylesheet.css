@@ -75,12 +75,26 @@ img {
   display: block;
 }
 
-#outer-modal {
-
+.viewport-inner {
+  pointer-events: none;
+  position : absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 998;
+  -webkit-box-shadow: inset -30px 0 28px -12px #fff;
+  box-shadow: inset -30px 0 28px -12px #fff;
 }
 
-.inner-modal {
-
+.outer-modal {
+  padding-top: 40px;
+  white-space: nowrap;
+  width: auto;
+  height: 280px;
+  position: relative;
+  top: 50%;
+  border: 2px solid #555;
 }
 
 .triangle-overlay {
