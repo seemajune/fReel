@@ -69,21 +69,18 @@ img {
 }
 
 .outer-modal {
-  position: relative;
-  top: 50%;
-  right: 0;
-  left: 0;
-  bottom: 20%;
-  z-index: 999;
+  position: fixed;
+  top: 0;
+  height: 50%;
+  width: 1280px;
   background-color: #fff;
-  height: 100%;
-  width: 100%;
 
 }
 
 .outer-modal img {
-  height: 10%;
-  width: 10%;
+  display: inline-block;
+  float: left;
+  height: 80%;
 }
 
 .triangle-overlay {
